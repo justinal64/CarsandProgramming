@@ -11,14 +11,14 @@ namespace CarsandProgramming.Controllers
 {
     public class ProgrammingController : ApiController
     {
-        readonly IProgrammingGetter _getter;
+        readonly IProgrammingRepository _getter;
 
         public ProgrammingController()
         {
             _getter = new ProgrammingGetter();
         }
 
-        public ProgrammingController(IProgrammingGetter getter)
+        public ProgrammingController(IProgrammingRepository getter)
         {
             _getter = getter;
         }

@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace CarsandProgramming.Interfaces
 {
-    public interface IProgrammingGetter
+    public interface IProgrammingRepository
     {
         ProgrammingLanguage GetById(int id);
+
+        List<ProgrammingLanguage> GetAll(int activeUsers, string language, string yearCreated);
+
+        ProgrammingLanguage Create();
+
     }
 }

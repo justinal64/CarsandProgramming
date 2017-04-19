@@ -1,14 +1,22 @@
-﻿using CarsandProgramming.Interfaces;
-using CarsandProgramming.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using CarsandProgramming.Interfaces;
+using CarsandProgramming.Models;
 
 namespace CarsandProgramming.DAL
 {
-    public class ProgrammingGetter : IProgrammingGetter
+    public class ProgrammingGetter : IProgrammingRepository
     {
+        public ProgrammingLanguage Create(int activeUsers, string language, string yearCreated)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ProgrammingLanguage> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public ProgrammingLanguage GetById(int id)
         {
             if (id == 0) return null;
