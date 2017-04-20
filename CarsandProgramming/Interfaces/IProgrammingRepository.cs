@@ -11,9 +11,9 @@ namespace CarsandProgramming.Interfaces
     {
         ProgrammingLanguage GetById(int id);
 
-        List<ProgrammingLanguage> GetAll(int activeUsers, string language, string yearCreated);
+        List<ProgrammingLanguage> GetAll();
 
-        ProgrammingLanguage Create();
+        ProgrammingLanguage Create(int activeUsers, string language, string yearCreated);
 
     }
 }
