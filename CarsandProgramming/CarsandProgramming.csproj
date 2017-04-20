@@ -137,12 +137,16 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\ProgrammingController.cs" />
-    <Compile Include="DAL\ProgrammingGetter.cs" />
+    <Compile Include="DAL\CarsRepository.cs" />
+    <Compile Include="DAL\ProgrammingRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ICarRepository.cs" />
     <Compile Include="Interfaces\IProgrammingRepository.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\ProgrammingLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

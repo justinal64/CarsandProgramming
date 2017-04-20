@@ -5,7 +5,7 @@ using CarsandProgramming.Models;
 
 namespace CarsandProgramming.DAL
 {
-    public class ProgrammingGetter : IProgrammingRepository
+    public class ProgrammingRepository : IProgrammingRepository
     {
         public ProgrammingLanguage Create(int activeUsers, string language, string yearCreated)
         {

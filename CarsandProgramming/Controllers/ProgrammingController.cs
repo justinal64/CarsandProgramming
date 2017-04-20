@@ -15,7 +15,7 @@ namespace CarsandProgramming.Controllers
 
         public ProgrammingController()
         {
-            _getter = new ProgrammingGetter();
+            _getter = new ProgrammingRepository();
         }
 
         public ProgrammingController(IProgrammingRepository getter)
@@ -27,15 +27,15 @@ namespace CarsandProgramming.Controllers
         [Route("api/programming/{id}")]
         public HttpResponseMessage CrazyTime(int id)
         {
-            var sash = _getter.GetById(id);
+            var programmingLanguage = _getter.GetById(id);
 
-            if (sash == null)
+            if (programmingLanguage == null)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound,
                     $"No programming language with an id of {id} exist");
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, sash);
+            return Request.CreateResponse(HttpStatusCode.OK, programmingLanguage);
         }
     }
 }
